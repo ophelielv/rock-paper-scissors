@@ -1,0 +1,140 @@
+body{
+    font-family: 'sans-serif';
+    width:100%;
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;    
+    background-color: antiquewhite;
+    
+}
+
+html{
+    width:100%;
+    height: 100%;
+}
+
+
+
+header{
+    background-color: gold;
+    text-align: center;
+    color: white;
+    padding: 150px 20px 20px 20px;
+    margin-bottom: 0px;
+    
+}
+
+header.inTheGame{
+    padding-top: 10px!important;
+}
+
+div.chooseGame{
+    background-color: antiquewhite;
+    height: 200px;
+    text-align: center;
+    padding-top: 102px;
+}
+
+div.choose{
+    padding: 30px;
+    text-align: center;
+    margin: 60px 0px;
+    color:black;
+}
+
+
+div#second{
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+}
+
+div#second h2{
+    margin-top: 72px;
+}
+
+section#score{
+    padding: 100px 0px;
+    text-align: center;
+    background-color: black;
+    color:white;
+    float:left;
+    width:15%;
+    height: 60%;
+    position: absolute;
+}
+
+section#game{
+    text-align: center;
+    background-color: antiquewhite;
+    float:right;
+    width: 85%;
+    padding-bottom:30px;
+}
+
+section#game p#match{
+   /* visibility: hidden;*/
+    text-align: center;
+    padding: 20px;
+}
+
+section#game h2{
+    margin-top: 60px;
+}
+a.chooseGame{
+    margin: 5px;
+    padding: 50px 20px 50px 20px;
+    background-color: cadetblue;
+    border-radius: 21px;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+a.chooseGame:hover{
+    background-color: tomato;
+}
+
+span.chooseWeapon{
+    margin: 10px;
+    padding: 50px 40px 50px 40px;
+    background-color: #F44336;
+    border-radius: 21px;
+    color: white;
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+span.chooseWeapon:hover{
+    background-color:darkcyan;
+}
+
+span#playAgain{
+    visibility: hidden;
+    margin-left:20px;
+        background-color: tomato;
+    color: white;
+}
+
+span.computerWeapon{
+    margin: 10px;
+    padding: 50px 85px 50px 85px;
+    background-color: /*dimgrey*/orchid;
+    border-radius: 21px;
+    color: black;
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.pad25{
+    padding: 25px;
+}
+
+
+
+
+
