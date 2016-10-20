@@ -1,12 +1,22 @@
-<?php     session_start(); ?>
-
+<?php
+    use \RockPaperScissors\Autoloader;
+    use \RockPaperScissors\Weapon;
+    use \RockPaperScissors\WeaponList;
+    
+    require '../classes/Autoloader.class.php'; 
+    Autoloader::register(); 
+    
+    
+?>
 <!doctype html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors</title>
-        <link rel="stylesheet" href="../rockpapercscissors.css" />
+        <link rel="stylesheet" href="../css/rockpapercscissors.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/f5bbde3669.js"></script>
+
     </head>
     
     <body>
@@ -27,31 +37,35 @@
     
     <section id="game">
         <?php
-            require '../Weapon.class.php';
 
-            $weaponList = array();
-            foreach ($_SESSION["weaponList"] as $weapon){
+            $weaponListObj = WeaponList::getInstance();
+
+            $weaponsArray = [];
+            foreach ($weaponListObj->getWeaponArray() as $weapon){
                 $temp_weapon = new Weapon($weapon["name"],$weapon["win_against"]);
-                array_push($weaponList,$temp_weapon);
+                array_push($weaponsArray,$temp_weapon);
             }
+
         ?>
         
     
         <div id = "first" class="choose">
         
             <?php
-                foreach($weaponList as $weapon){
+                foreach($weaponsArray as $weapon){
+
                     $weapon->displayWeapon();
                 }
             ?>
         </div>
         <h2>VS</h2>
         <div id="second">
-            <span class="computerWeapon" name="computer" id="computer">?</span> 
+            <span class="opponentWeapon" name="computer" id="computer">?</span> 
         </div>
         
-        <h2>Winner is : <span id="winner">--</span> <span id="playAgain">Play again</span></h2>
-       
+        <div class="result">
+            <h2><span id="winner"></span> <span id="playAgain">Play again</span></h2>
+        </div>
         
     </section>
 
@@ -60,7 +74,7 @@
                  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
              <![endif]-->
      
-        <script src="../rockpapercscissors.js"></script>
+        <script src="../js/playerVsComputer.js"></script>
     
   </body>
 </html>

@@ -1,5 +1,9 @@
 <?php
- 
+namespace RockPaperScissors;
+
+/**
+ * Class WeaponList
+ */
 class WeaponList {
  
   /**
@@ -23,14 +27,15 @@ class WeaponList {
     *
     * @param void
     * @return void
+    * @todo faire une liste de weapon objects
     */
     private function __construct() { 
         $this->weaponList = array(
-            array(name => 'rock',       win_against => array( array('crushes','scissors'), array('crushes','lizard')    )),
-            array(name => 'paper',      win_against => array( array('covers','rock'), array('disproves','spock')        )),
-            array(name => 'scissors',   win_against => array( array('cuts','paper'), array('decapitates','lizard')      )),
-            array(name => 'lizard',     win_against => array( array('eats','paper'), array('poisons','spock')           )),
-            array(name => 'spock',      win_against => array( array('vaporizes','rock'), array('smashes','scissors')    ))
+            array('name' => 'rock',       'win_against' => array( array('crushes','scissors'), array('crushes','lizard')    )),
+            array('name' => 'paper',      'win_against' => array( array('covers','rock'), array('disproves','spock')        )),
+            array('name' => 'scissors',   'win_against' => array( array('cuts','paper'), array('decapitates','lizard')      )),
+            array('name' => 'lizard',     'win_against' => array( array('eats','paper'), array('poisons','spock')           )),
+            array('name' => 'spock',      'win_against' => array( array('vaporizes','rock'), array('smashes','scissors')    ))
             );
     }
     
@@ -44,7 +49,7 @@ class WeaponList {
     }
  
    /**
-    * Méthode qui crée l'unique instance de la classe
+    * Crée l'unique instance de la classe
     * si elle n'existe pas encore puis la retourne.
     *
     * @param void

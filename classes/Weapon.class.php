@@ -1,9 +1,15 @@
 <?php
+namespace RockPaperScissors;
 
+/**
+ * Class Weapon
+ */
 class Weapon
 {
+    
     private $name;
     /**
+     * Tableau des actions possibles sur chaque adversaire
      * @array
      */
     private $win_against; 
@@ -15,7 +21,19 @@ class Weapon
     }
     
     public function displayWeapon(){
-        echo '<span class="chooseWeapon" name="'. $this->name . '" id="'. $this->name. '">' . $this->name . '</span> ';
+        echo '<span class="chooseWeapon" name="'.$this->name .'" id="'.$this->name.'"><i class="fa fa-hand-'.$this->name .'-o" aria-hidden="true"></i><br>' . $this->name . '</span> ';
+    
+        /* 
+        <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>*/
+    }
+        
+    public function __toString()
+    {
+        return "\nWeapon // name = $this->name \n";
     }
 
     public function getName(){
@@ -24,7 +42,6 @@ class Weapon
 
 
     static function randomWeapon(){
-        if(!class_exists(WeaponList)) require('../classes/WeaponList.class.php');
         $weaponListObj = WeaponList::getInstance();
         $weaponListArray = $weaponListObj->getWeaponArray();
         
@@ -35,7 +52,6 @@ class Weapon
     }
     
     static function checkWeaponAutorized($weaponNameToCheck){
-        if(!class_exists(WeaponList)) require('../classes/WeaponList.class.php');
         $weaponListObj = WeaponList::getInstance();
 
 
@@ -64,23 +80,19 @@ class Weapon
             );*/
         
         if($weapon1->name === $weapon2->name){
-         //   var_dump("egalité");
             return array($weapon1, $weapon2);
         }
         else if( ($weapon1->name === $weapon2->win_against[0][1]) || ($weapon1->name === $weapon2->win_against[1][1])){
-        //    var_dump($weapon2->name);
             return $weapon2;
-           
         }
         else if( ($weapon2->name === $weapon1->win_against[0][1]) || ($weapon2->name === $weapon1->win_against[1][1])){
-        //    var_dump($weapon1->name);
             return $weapon1;
         }
         else{
-        //    var_dump("error");
             return false;
         }
     }
+    
     
     static function displayResult($weaponWinner, $weaponLooser){
         if( $weaponLooser->name === $weaponWinner->win_against[0][1]){
