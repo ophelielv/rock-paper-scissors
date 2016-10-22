@@ -17,6 +17,7 @@ var playGame = function(){
 
             if(data){
                 $("#computer").text(data.computer);
+                $("#computer").append( '<br><i class="fa fa-hand-' + data.computer + '-o" aria-hidden="true"></i>');
                 $("#winner").text(data.result);
                 
                 if(data.winner === "Player" || data.winner === "It's a tie !"){
@@ -47,6 +48,12 @@ $(".chooseWeapon").on('click',playGame);
 $("#playAgain").click(function(){
     $("#playAgain").css("visibility","hidden");
     $("span.chooseWeapon").css("background-color","tomato");
+    
+    $("span.chooseWeapon").hover(function(){
+        $(this).css("background-color", "darkcyan");
+        }, function(){
+        $(this).css("background-color", "tomato");
+    });
     $("#computer").text("?");
     $("#winner").text("");
     $(".chooseWeapon").on('click',playGame);

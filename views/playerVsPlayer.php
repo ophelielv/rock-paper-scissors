@@ -38,41 +38,41 @@
         
         
     </section>
-    
-    <section id="game">
-        <?php
-
-            $weaponListObj = WeaponList::getInstance();
-
-            $weaponsArray = [];
-            foreach ($weaponListObj->getWeaponArray() as $weapon){
-                $temp_weapon = new Weapon($weapon["name"],$weapon["win_against"]);
-                array_push($weaponsArray,$temp_weapon);
-            }
-
-        ?>
-        
-    
-        <div id = "first" class="choose">
-        
+    <div class="wrapper">
+        <section id="game">
             <?php
-                foreach($weaponsArray as $weapon){
-
-                    $weapon->displayWeapon();
+    
+                $weaponListObj = WeaponList::getInstance();
+    
+                $weaponsArray = [];
+                foreach ($weaponListObj->getWeaponArray() as $weapon){
+                    $temp_weapon = new Weapon($weapon["name"],$weapon["win_against"]);
+                    array_push($weaponsArray,$temp_weapon);
                 }
+    
             ?>
-        </div>
-        <h2>VS</h2>
-        <div id="second">
-            <span class="opponentWeapon" name="opponent" id="opponent">?</span> 
-        </div>
+            
         
-        <div class="result">
-            <h2><span id="winner"></span> <span id="playAgain">Play again</span></h2>
-        </div>
-        
-    </section>
-
+            <div id = "first" class="choose">
+            
+                <?php
+                    foreach($weaponsArray as $weapon){
+    
+                        $weapon->displayWeapon();
+                    }
+                ?>
+            </div>
+            <h2>VS</h2>
+            <div id="second">
+                <span class="opponentWeapon" name="opponent" id="opponent">?</span> 
+            </div>
+            
+            <div class="result">
+                <h2><span id="winner"></span> <span id="playAgain">Play again</span></h2>
+            </div>
+            
+        </section>
+    </div>
         
              <!--[if lt IE 7]>
                  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

@@ -28,6 +28,7 @@ conn.onmessage = function(e) {
         //résultat de la partie
         var response = jQuery.parseJSON(e.data);
         $("#opponent").text(response.opponent);
+        $("#opponent").append( '<br><i class="fa fa-hand-' +response.opponent + '-o" aria-hidden="true"></i>');
         $("#winner").text(response.result);
         
         if(response.winner === "Player 1" || response.winner === "It's a tie !"){
@@ -79,6 +80,12 @@ $(".chooseWeapon").on('click',playGame);
 $("#playAgain").click(function(){
     $("#playAgain").css("visibility","hidden");
     $("span.chooseWeapon").css("background-color","tomato");
+    $("span.chooseWeapon").hover(function(){
+        $(this).css("background-color", "darkcyan");
+        }, function(){
+        $(this).css("background-color", "tomato");
+    });
+    
     $("#opponent").text("?");
     $("#winner").text("");
     $(".chooseWeapon").on('click',playGame);

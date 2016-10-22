@@ -26,49 +26,45 @@
         Player VS Computer</h1>
 
     </header>
-        
-    <section id="score">
-        <a href="../index.php" alt="Homepage">Homepage</a>
-        <p><strong>Score</strong><br>
-        Player : <span id="j1">0</span><br>
-        Computer : <span id="j2">0</span></p>
-        
-    </section>
     
-    <section id="game">
-        <?php
-
-            $weaponListObj = WeaponList::getInstance();
-
-            $weaponsArray = [];
-            foreach ($weaponListObj->getWeaponArray() as $weapon){
-                $temp_weapon = new Weapon($weapon["name"],$weapon["win_against"]);
-                array_push($weaponsArray,$temp_weapon);
-            }
-
-        ?>
+    <div class="wrapper">
+        <section id="score">
+            <a href="../index.php" alt="Homepage">Homepage</a>
+            <p><strong>Score</strong><br>
+            Player : <span id="j1">0</span><br>
+            Computer : <span id="j2">0</span></p>
+            
+        </section>
         
-    
-        <div id = "first" class="choose">
-        
+        <section id="game">
             <?php
-                foreach($weaponsArray as $weapon){
-
-                    $weapon->displayWeapon();
+                $weaponListObj = WeaponList::getInstance();
+    
+                $weaponsArray = [];
+                foreach ($weaponListObj->getWeaponArray() as $weapon){
+                    $temp_weapon = new Weapon($weapon["name"],$weapon["win_against"]);
+                    array_push($weaponsArray,$temp_weapon);
                 }
             ?>
-        </div>
-        <h2>VS</h2>
-        <div id="second">
-            <span class="opponentWeapon" name="computer" id="computer">?</span> 
-        </div>
+            
         
-        <div class="result">
-            <h2><span id="winner"></span> <span id="playAgain">Play again</span></h2>
-        </div>
+            <div id = "first" class="choose">
+                <?php foreach($weaponsArray as $weapon){
+    
+                        $weapon->displayWeapon();
+                    } ?>
+            </div>
+            <h2>VS</h2>
+            <div id="second">
+                <span class="opponentWeapon" name="computer" id="computer">?</span> 
+            </div>
+            
+            <div class="result">
+                <h2><span id="winner"></span> <span id="playAgain">Play again</span></h2>
+            </div>
+        </section>
         
-    </section>
-
+    </div>   
         
              <!--[if lt IE 7]>
                  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

@@ -26,6 +26,7 @@ header{
     color: white;
     padding: 150px 20px 20px 20px;
     margin-bottom: 0px;
+    height:15%;
     
 }
 
@@ -34,16 +35,19 @@ header.inTheGame{
 }
 /***********************************************/
 /*************body******************************/
+.wrapper{
+    height:85%;
+}
 /***********nav bar*******/
 
 section#score{
-    padding: 100px 0px;
+    padding: 100px 5px;
     text-align: center;
     background-color: black;
     color:white;
     float:left;
     width:15%;
-    height: 85%;
+    height: 100%;
     position: absolute;
 }
 
@@ -111,7 +115,6 @@ a.chooseGame:hover{
 }
 
 span.chooseWeapon{
-    display: inline-block;
     margin: 10px;
     padding: 50px 40px 50px 40px;
     background-color: #F44336;
@@ -121,6 +124,7 @@ span.chooseWeapon{
     text-decoration: none;
     font-size: 1.4em;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 span.chooseWeapon:hover{
@@ -152,6 +156,7 @@ span.opponentWeapon{
     text-decoration: none;
     font-size: 1.4em;
     text-transform: uppercase;
+    display: inline-block;
 }
 
 
