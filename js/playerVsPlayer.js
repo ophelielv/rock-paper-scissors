@@ -65,7 +65,9 @@ function isJson(str) {
 
 var playGame = function()
 {
-    $(this).closest('div').children(".chooseWeapon").css("background-color","#b9b9b9");
+    $(this).closest('div').children(".chooseWeapon")
+        .css("background-color","#b9b9b9")
+        .unbind('mouseenter').unbind('mouseleave');
     $(this).css('background-color','darkcyan');
     $(".chooseWeapon").off('click',playGame);
 

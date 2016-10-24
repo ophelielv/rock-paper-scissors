@@ -7,6 +7,8 @@
     require '../classes/Autoloader.class.php'; 
 
     Autoloader::register(); 
+    
+    //$service = Service::getInstance();
 ?>
 <!doctype html>
 <html lang="fr">
@@ -23,7 +25,7 @@
 
 
     <header class="inTheGame">
-        <h1><small>Rock, Paper, Scissors : </small><br/>
+        <h1><small>Rock, Paper, Scissors, Lizard, Spock : </small><br/>
         Player VS Player</h1>
 
     </header>
@@ -34,7 +36,7 @@
         Player 1 : <span id="j1">0</span><br>
         Player 2 : <span id="j2">0</span>
         </p>
-        <div id="multiplayers"><em>Multiplayers : </em></div>
+        <div id="multiplayers"><em>Multiplayers : </em><br></div>
         
         
     </section>

@@ -22,7 +22,7 @@
     <body>
 
     <header class="inTheGame">
-        <h1><small>Rock, Paper, Scissors : </small><br/>
+        <h1><small>Rock, Paper, Scissors, Lizard, Spock : </small><br/>
         Player VS Computer</h1>
 
     </header>
@@ -66,6 +66,7 @@
         
     </div>   
         
+    
              <!--[if lt IE 7]>
                  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
              <![endif]-->

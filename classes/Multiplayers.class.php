@@ -83,7 +83,7 @@ class Multiplayers implements MessageComponentInterface {
             return;
         }
         
-        //$msg = nom du jeu
+        //$msg = nom du weapon choisi
         $selectedWeapon = Weapon::checkWeaponAutorized($msg);
         if($this->player1->getId() === $from->resourceId)
         {
@@ -130,15 +130,27 @@ class Multiplayers implements MessageComponentInterface {
         $this->clients->detach($conn);
         $this->numRecv = count($this->clients);
         echo "Connection {$conn->resourceId} has disconnected\n";
+        
+        $returnSentence = "";
   
         if(is_object($this->player1) && $this->player1->getId() == $conn->resourceId){
-            echo $this->player1->getName() . " is disconnected";
+            $returnSentence = $this->player1->getName() . " is disconnected";
+            echo $returnSentence;
             $this->player1 = null;
         }
         
         if(is_object($this->player2) && $this->player2->getId() == $conn->resourceId){
-            echo $this->player2->getName() . " is disconnected";
+            $returnSentence = $this->player2->getName() . " is disconnected";
+            echo $returnSentence;
             $this->player2 = null;
+        }
+        
+        // And tell the other clients about the new user.
+        foreach ($this->clients as $client) {
+            if ($conn !== $client) {
+                $client->send(sprintf($returnSentence));
+            }
+        
         }
     }
   

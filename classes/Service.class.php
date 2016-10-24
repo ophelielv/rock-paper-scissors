@@ -13,6 +13,8 @@ class Service {
    */
    private static $_instance = null;
    
+   private static $pid;
+   
 
 
    /**
@@ -22,15 +24,17 @@ class Service {
     * @return void
     */
     private function __construct() { 
-        exec( 'php ' .__DIR__ . '/../service/service.php');
-      /*  error_reporting(E_ALL);
+        exec('php /home/ubuntu/workspace/service/service.php');
+     /*   error_reporting(E_ALL);
 
         // Ajoute une redirection pour que vous puissiez lire stderr. 
-        $handle = popen( __DIR__ . '/../service/service.php', 'r');
+        //$handle = popen( __DIR__ . '/../service/service.php', 'r');
+        $handle = popen('/home/ubuntu/workspace/service/service.php', 'r');
         echo "'$handle'; " . gettype($handle) . " <br>";
         $read = fread($handle, 8181);
         echo $read;
         pclose($handle);*/
+        
     }
     
  
