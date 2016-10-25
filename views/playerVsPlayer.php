@@ -30,17 +30,18 @@
 
     </header>
         
-    <section id="score">
-        <a href="../index.php" alt="Homepage">Homepage</a>
-        <p><strong>Score</strong><br>
-        Player 1 : <span id="j1">0</span><br>
-        Player 2 : <span id="j2">0</span>
-        </p>
-        <div id="multiplayers"><em>Multiplayers : </em><br></div>
-        
-        
-    </section>
-    <div class="wrapper">
+    <div class="wrapper">    
+        <section id="score">
+            <a href="../index.php" alt="Homepage">Homepage</a>
+            <p><strong>Score</strong><br>
+            Player 1 : <span id="j1">0</span><br>
+            Player 2 : <span id="j2">0</span>
+            </p>
+            <div id="multiplayers"><em>Multiplayers : </em><br></div>
+            
+            
+        </section>
+
         <section id="game">
             <?php
     
@@ -66,7 +67,7 @@
             </div>
             <h2>VS</h2>
             <div id="second">
-                <span class="opponentWeapon" name="opponent" id="opponent">?</span> 
+                <span class="opponentWeapon" name="opponent" id="opponent"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span> 
             </div>
             
             <div class="result">
@@ -74,13 +75,16 @@
             </div>
             
         </section>
-    </div>
-        
+
+    </div>     
              <!--[if lt IE 7]>
                  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
              <![endif]-->
+    <?php include "footer.php" ?>
      
-        <script src="../js/playerVsPlayer.js"></script>
+     
+     
+     <script src="../js/playerVsPlayer.js"></script>
     
   </body>
 </html>

@@ -45,19 +45,18 @@ footer{
 /***********************************************/
 /*************body******************************/
 .wrapper{
-    height:85%;
+    display: flex;
+    color: cadetblue;
 }
 /***********nav bar*******/
 
 section#score{
-    padding: 100px 5px;
+    padding: 100px 25px;
     text-align: center;
     background-color: black;
     color:white;
-    float:left;
-    width:15%;
-    height: 100%;
-    position: absolute;
+    max-width: 200px;
+
 }
 
 section#score a{
@@ -89,8 +88,7 @@ div.choose{
 section#game{
     text-align: center;
     background-color: antiquewhite;
-    float:right;
-    width: 85%;
+
    /* padding-bottom:30px;*/
 }
 
@@ -122,7 +120,7 @@ a.chooseGame:hover{
 span.chooseWeapon{
     margin: 10px;
     padding: 50px 40px 50px 40px;
-    background-color: #F44336;
+    background-color: tomato;
     border-radius: 21px;
     color: white;
     font-family: inherit;
@@ -133,7 +131,7 @@ span.chooseWeapon{
 }
 
 span.chooseWeapon:hover{
-    background-color:darkcyan;
+    background-color:cadetblue;
 }
 
 @media screen and (max-width: 640px) {
@@ -154,7 +152,7 @@ div#second{
 span.opponentWeapon{
     margin: 10px;
     padding: 50px 85px 50px 85px;
-    background-color: darkcyan;
+    background-color: cadetblue;
     border-radius: 21px;
     color: black;
     font-family: inherit;
@@ -170,9 +168,7 @@ div#second h2{
 }
 
 /***result*/
-div.result{
-    margin-top: 50px;
-}
+
 
 span#playAgain{
     visibility: hidden;

@@ -5,7 +5,7 @@ var playGame = function(){
     $(this).closest('div').children(".chooseWeapon")
         .css("background-color","#b9b9b9")
         .unbind('mouseenter').unbind('mouseleave');
-    $(this).css('background-color','darkcyan');
+    $(this).css('background-color','cadetblue');
 
     $(".chooseWeapon").off('click',playGame);
 
@@ -55,11 +55,11 @@ $("#playAgain").click(function(){
     $("span.chooseWeapon").css("background-color","tomato");
     
     $("span.chooseWeapon").hover(function(){
-        $(this).css("background-color", "darkcyan");
+        $(this).css("background-color", "cadetblue");
         }, function(){
         $(this).css("background-color", "tomato");
     });
-    $("#computer").text("?");
+    $("#computer").text('').append('<i class="fa fa-question-circle-o" aria-hidden="true"></i>');
     $("#winner").text("");
     $(".chooseWeapon").on('click',playGame);
 });

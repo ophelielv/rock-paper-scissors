@@ -56,22 +56,22 @@
             </div>
             <h2>VS</h2>
             <div id="second">
-                <span class="opponentWeapon" name="computer" id="computer">?</span> 
+                <span class="opponentWeapon" name="computer" id="computer"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span> 
             </div>
             
             <div class="result">
                 <h2><span id="winner"></span> <span id="playAgain">Play again</span></h2>
             </div>
         </section>
+    </div>    
         
-    </div>   
-        
-    
-             <!--[if lt IE 7]>
-                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-             <![endif]-->
      
-        <script src="../js/playerVsComputer.js"></script>
+         <!--[if lt IE 7]>
+             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+         <![endif]-->
+    <?php include "footer.php" ?>
+    
+    <script src="../js/playerVsComputer.js"></script>
     
   </body>
 </html>
