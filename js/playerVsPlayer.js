@@ -1,7 +1,6 @@
 /*****websocket********/
-
 // Edit these variables to match your environent.
-var ws_host = 'rock-paper-scissors-ophelielv.c9.io';
+var ws_host = 'rock-paper-scissors-lizard-spock-ophelielv.c9.io';
 var ws_port = '80';
 var ws_folder = '';
 var ws_path = '/websocket';

@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../classes/Multiplayers.class.php';
+require __DIR__ . '/../src/classes/Multiplayers.class.php';
 
 use Ratchet\Server\IoServer;
 use Ratchet\Http\HttpServer;

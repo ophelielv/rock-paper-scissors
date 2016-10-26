@@ -2,10 +2,10 @@
     use \RockPaperScissors\Service;
     use \RockPaperScissors\Autoloader;
     
-    require 'classes/Autoloader.class.php'; 
+    require 'src/classes/Autoloader.class.php'; 
     Autoloader::register(); 
     
-    $service = Service::getInstance(); 
+ //   $service = Service::getInstance(); 
 ?>
 
 <!doctype html>
@@ -26,8 +26,8 @@
             
         <section>
             <div class="chooseGame pad25">
-                <a href="/views/playerVsComputer.php" class="chooseGame" name="player" id="playerVScomputer">Player vs Computer</a>
-                <a href="/views/playerVsPlayer.php" class="chooseGame" name="multiple" id="playerVSplayer">Player vs Player</a>
+                <a href="src/views/playerVsComputer.php" class="chooseGame" name="player" id="playerVScomputer">Player vs Computer</a>
+                <a href="src/views/playerVsPlayer.php" class="chooseGame" name="multiple" id="playerVSplayer">Player vs Player</a>
             </div>
             
 
@@ -39,6 +39,6 @@
        
         </section>
         
-        <?php include "views/footer.php" ?>
+        <?php include "src/views/footer.php" ?>
     </body>
 </html>
