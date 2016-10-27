@@ -4,7 +4,7 @@
     use \RockPaperScissors\WeaponList;
     use \RockPaperScissors\Service;
     
-    require '../classes/Autoloader.class.php'; 
+    require '../classes/Autoloader.php'; 
 
     Autoloader::register(); 
     
@@ -61,7 +61,7 @@
                 <?php
                     foreach($weaponsArray as $weapon){
     
-                        $weapon->displayWeapon();
+                        echo $weapon->displayWeapon();
                     }
                 ?>
             </div>

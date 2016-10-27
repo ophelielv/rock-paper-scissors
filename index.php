@@ -2,7 +2,7 @@
     use \RockPaperScissors\Service;
     use \RockPaperScissors\Autoloader;
     
-    require 'src/classes/Autoloader.class.php'; 
+    require 'src/classes/Autoloader.php'; 
     Autoloader::register(); 
     
  //   $service = Service::getInstance(); 

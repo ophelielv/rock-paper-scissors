@@ -3,9 +3,15 @@
     "require": {
         "cboden/ratchet": "0.3.*"
     },
+    "require-dev":{
+        "cboden/ratchet": "0.3.*",
+        "phpunit/phpunit": "^4.8"
+    },
     "autoload":{
         "psr-4":{
-            "RockPaperScissors\\": "src/"
+            "RockPaperScissors\\": "src/",
+            "RockPaperScissors\\Tests\\": "tests/"
+             
         }
     }
 }

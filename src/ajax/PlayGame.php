@@ -4,7 +4,7 @@
     use \RockPaperScissors\Player;
     use \RockPaperScissors\Game;
     
-    require '../classes/Autoloader.class.php'; 
+    require '../classes/Autoloader.php'; 
     Autoloader::register(); 
 
     

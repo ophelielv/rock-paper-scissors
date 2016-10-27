@@ -3,7 +3,7 @@
     use \RockPaperScissors\Weapon;
     use \RockPaperScissors\WeaponList;
     
-    require '../classes/Autoloader.class.php'; 
+    require '../classes/Autoloader.php'; 
     Autoloader::register(); 
     
     
@@ -51,7 +51,7 @@
             <div id = "first" class="choose">
                 <?php foreach($weaponsArray as $weapon){
     
-                        $weapon->displayWeapon();
+                        echo $weapon->displayWeapon();
                     } ?>
             </div>
             <h2>VS</h2>
