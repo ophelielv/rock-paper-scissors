@@ -4,7 +4,7 @@
     
     require 'src/classes/Autoloader.php'; 
     Autoloader::register(); 
-    
+
  //   $service = Service::getInstance(); 
 ?>
 

@@ -8,7 +8,7 @@
 
     Autoloader::register(); 
     
-    $service = Service::getInstance();
+  //  $service = Service::getInstance();
 ?>
 <!doctype html>
 <html lang="fr">
